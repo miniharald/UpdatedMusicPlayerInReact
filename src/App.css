@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Varela Round", sans-serif;
+  color: white;
+  padding: 1vw;
+  background-color: black;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  width: 62vw;
+  margin: auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  justify-content: space-between;
+  display: flex;
+  padding: 0.5vw;
+  border-bottom: 0.1vw solid black;
+  background-image: url(images/bg.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+}
+section {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+}
+section:last-child {
+  flex-grow: 2;
+  border-left: 0.1vw solid black;
+  background-image: url(images/bg.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+section:last-child img {
+  width: 25vw;
+  padding: 1vw;
+}
+
+section:first-child > article:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+article {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.song.active {
+  background: rgba(255, 255, 255, 0.3);
+}
+.song {
+  justify-content: space-between;
+  padding-right: 1vw;
+  background: url(images/bg.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  cursor: pointer;
+}
+.song img {
+  width: 6vw;
+  padding: 1vw;
+}
+.song p {
+  padding-top: 2vh;
+  font-size: 80%;
+}
+.song span {
+  display: flex;
+}
+.title {
+  padding: 1vw;
+}
+.title p {
+  text-align: center;
+  font-size: 80%;
+}
+.time {
+  padding: 1vw;
+  font-size: 50%;
+}
+article.control {
+  padding: 1vw;
+}
+#play {
+  font-size: 300%;
+  cursor: pointer;
+}
+#repeat,
+#shuffle {
+  font-size: 70%;
+  cursor: pointer;
+}
+#previous i:hover,
+#play i:hover,
+#next i:hover {
+  color: silver;
+  transition: 0.15s ease-in-out;
+}
+#previous,
+#next {
+  color: silver;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+}
+#repeat,
+#shuffle {
+  color: silver;
+  cursor: pointer;
+}
+#repeat:hover,
+#shuffle:hover {
   color: white;
+  transition: 0.15s ease-in-out;
 }
-
-.App-link {
-  color: #61dafb;
+p {
+  margin: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+time {
+  width: 20vw;
+  height: 0.5vh;
+  display: flex;
+  border-radius: 1vw;
+  background-color: black;
+  cursor: pointer;
+}
+#progressbar {
+  height: 0.5vh;
+  border-radius: 1vw;
+  background-color: grey;
+}
+#artist {
+  font-weight: bold;
 }
