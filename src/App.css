@@ -7,7 +7,7 @@ body {
   padding: 1vw;
   background-color: black;
 }
-nav {
+.container {
   width: 62vw;
   margin: auto;
 }
@@ -36,15 +36,15 @@ section:last-child {
   background-size: cover;
   background-position: 50% 50%;
 }
-section:last-child img {
+.album img {
   width: 25vw;
   padding: 1vw;
 }
 
-section:first-child > article:hover {
+.song:hover {
   background: rgba(255, 255, 255, 0.3);
 }
-article {
+.control, .song, .time, .title, .album {
   flex-grow: 1;
   display: flex;
   justify-content: space-around;
@@ -83,7 +83,7 @@ article {
   padding: 1vw;
   font-size: 50%;
 }
-article.control {
+.control {
   padding: 1vw;
 }
 #play {
@@ -120,7 +120,7 @@ article.control {
 p {
   margin: 0;
 }
-time {
+#bar {
   width: 20vw;
   height: 0.5vh;
   display: flex;
